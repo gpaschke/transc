@@ -1,0 +1,27 @@
+{
+  "name": "transc",
+  "version": "1.0.0",
+  "description": "Translation CLI using deepl to simply convert your source i18n json language file into different target languages.",
+  "main": "index.js",
+  "bin": {
+    "transc": "index.js"
+  },
+  "keywords": [
+    "deepl",
+    "translate",
+    "cli",
+    "i18n",
+    "angular",
+    "react"
+  ],
+  "author": "gpaschke",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gpaschke/transc.git"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "yargs": "^17.0.1"
+  }
+}
