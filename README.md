@@ -1,7 +1,7 @@
 # #transc (CLI)
 Translation CLI using **deepL** to simply convert your source i18n json language file into different target languages.
 
-Just execute `transc` and generate your translations. e.g.:
+Just execute `transc` to generate your translations:
 ```
 package.json
 ..
@@ -13,7 +13,7 @@ src/
     -> de.json
     -> ru.json
 ```
-Based on your source file (en.json - but not limited to english) :
+Based on your source file (e.g.: en.json) :
 ```JSON
 {
   "translationKey": "Word or sentences",
@@ -24,6 +24,12 @@ Based on your source file (en.json - but not limited to english) :
 }
 ```
 
+Use ``transc -h`` for help.
+
+## Supported languages
+Bulgarian (BG), Czech (CS), Danish (DA), German (DE), Greek (EL), English (EN), Spanish (ES), Estonian (ET), Finnish (FI), French (FR), Hungarian (HU), Italian (IT), Japanese (JA), Lithuanian (LT), Latvian (LV), Dutch (NL), Polish (PL), Portuguese (PT), Romanian (RO), Russian (RU), Slovak (SK), Slovenian (SL), Swedish (SV), Chinese (ZH) 
+
+According to https://www.deepl.com/docs-api/translating-text/request/
 
 ## Setup
 Install transc package as devDependency inside your project using:
@@ -38,13 +44,13 @@ Edit the .transc file according to your needs.
 
 ```
 {
-	"path": "./i18n", // folder, where your translation files are located
-	"sourceLangFile": "en.json", // language file that should be used as source for further translations
+	"path": "./i18n",            // folder, where translation files are located
+	"sourceLangFile": "en.json", // language file that is used as source of translations 
 	"transLangCodes": [
-		"es", "fr" // add your target translation languages here as language code. Use https://www.deepl.com/docs-api/translating-text/request/ as reference for language codes.
+		"es", "fr"           // target translation languages as language code
 	],
-	"authKey": "xyz...", // you need a deepl api key: https://www.deepl.com/pro#developer
-	"useDevAPI": false // true when you want to use DeepL API Free
+	"authKey": "xyz...",    // deepl api key: https://www.deepl.com/pro#developer
+	"useDevAPI": false      // true for DeepL API Free
 }
 ```
 
@@ -54,4 +60,4 @@ Now you ready to go: ``transc``
 - handling large files by split the requests
 
 ## Thanks
-Thank you deepl team for offering such an awesome service!
+Thank you deepL for offering such an awesome service!
